@@ -1,7 +1,6 @@
 #!/bin/sh
-# This uses AppleScript to do the notifying.
 
 read msg
 
-echo "$msg" | grep -q stk5 && osascript -e "display notification \"$msg\" with title \"IRC\" sound name \"Ping\""
+echo "$msg" | grep -q stk5 && osascript -e "display notification \"$msg\" with title \"IRC ($1)\" sound name \"Ping\""
 exit 0
